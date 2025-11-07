@@ -1,18 +1,24 @@
+%option noyywrap
+
 %{
+#include <stdio.h>
 
-  
+#define YY_DECL int yylex()
 
+#include "analisador.tab.h"
 
 %}
 
-  NUM       [0-9]+
-  ID_OBS    [a-zA-Z]+
-  ID_DEVICE [a-zA-Z][a-zA-Z0-9]*
-  MSG       \"[^\"]"\
+ID_DEVICE [a-zA-Z][a-zA-Z0-9]*
 
 %%
+"dispositivos"    {return T_DISPOSITIVOS;}
+"fimdispositivos" {return T_FIMDISPOSITIVOS;}
 
-  
-  [ \t\n]+ /* eat up whitespaces */
+":" {return ':';}
+"[" {return '[';}
+"]" {return ']';}
 
+[ \t\n]+ ;
+{ID_DEVICE} {yylval.str = strdup(yytext); return ID_DEVICE;}
 %%
