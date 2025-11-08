@@ -66,7 +66,7 @@
     CMD_LIST
     {printf("\n\treturn 0;\n}\n");}
   ;
-  CMD_LIST: CMD';' CMD_LIST | CMD';'
+  CMD_LIST:';' |CMD';' CMD_LIST | CMD';'
   ;
   CMD: ATTRIB
       | OBSACT {printf("\t}\n");}

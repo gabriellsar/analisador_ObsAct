@@ -3,4 +3,4 @@ dispositivos:
   Alarme
 fimdispositivos
 def movimento = False;
-quando movimento == True execute ligar em Alarme;
+quando movimento == True : execute ligar em Alarme;

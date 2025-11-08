@@ -4,4 +4,4 @@ dispositivos:
   Termometro [temperatura]
 fimdispositivos
 def temperatura = 32;
-quando temperatura > 30 difundir: "Temperatura alta:" temperatura -> [Monitor, Celular];
+quando temperatura > 30 : difundir: "Temperatura alta:" temperatura -> [Monitor, Celular];

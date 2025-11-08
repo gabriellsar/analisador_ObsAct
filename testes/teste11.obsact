@@ -3,4 +3,4 @@ dispositivos:
   Bomba
 fimdispositivos
 def nivel = 15;
-quando nivel <= 20 execute ligar em Bomba;
+quando nivel <= 20 : execute ligar em Bomba;

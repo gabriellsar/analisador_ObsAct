@@ -5,4 +5,4 @@ dispositivos:
 fimdispositivos
 def luminosidade = 30;
 def movimento = True;
-quando luminosidade < 50 AND movimento == True execute ligar em PosteLuz;
+quando luminosidade < 50 and movimento == True : execute ligar em PosteLuz;

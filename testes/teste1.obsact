@@ -4,4 +4,4 @@ dispositivos:
 fimdispositivos
 def temperatura = 40;
 def potencia = 90;
-quando temperatura > 30 execute ligar em Ventilador;
+quando temperatura > 30 : execute ligar em Ventilador;
