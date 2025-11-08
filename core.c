@@ -14,7 +14,7 @@ void alerta(char* id, char* msg) {
   printf("%s\n", msg);
 }
 
-void alertav(char* id, char* msg, char** var) {
-  printf("%s recebeu o alerta:\n", id);
-  printf("%s %s\n", msg, var);
-
+void alertav(char* id, char* msg, int var) {
+  printf("%s recebeu o alerta: ", id);
+  printf("%s %d\n", msg, var);
+}

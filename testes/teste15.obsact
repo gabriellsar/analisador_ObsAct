@@ -1,0 +1,6 @@
+dispositivos:
+  Speaker [volume]
+  AdminPC
+fimdispositivos
+def volume = 11;
+quando volume > 10 difundir: "Volume maximo atingido:" volume -> [AdminPC];

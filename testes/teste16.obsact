@@ -1,0 +1,6 @@
+dispositivos:
+  Roteador
+  Impressora
+fimdispositivos
+execute ligar em Roteador;
+execute ligar em Impressora;

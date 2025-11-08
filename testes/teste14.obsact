@@ -1,0 +1,8 @@
+dispositivos:
+  Termostato [temp]
+  SensorJanela [aberta]
+  Aquecedor
+fimdispositivos
+def temp = 18;
+def aberta = False;
+quando temp < 20 AND aberta == False execute ligar em Aquecedor senao execute desligar em Aquecedor;

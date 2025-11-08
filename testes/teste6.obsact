@@ -1,0 +1,6 @@
+dispositivos:
+  Cafeteira [pronta]
+  Display
+fimdispositivos
+def pronta = False;
+quando pronta != True alerta para Display: "Fazendo cafe" senao alerta para Display: "Cafe pronto";

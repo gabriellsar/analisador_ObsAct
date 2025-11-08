@@ -1,7 +1,6 @@
 TARGET = analisador
 
 CC = gcc
-CFLAGS = -g -Wall
 
 FLEX = flex
 BISON = bison	
@@ -9,12 +8,15 @@ BISON = bison
 C_SOURCES = analisador.tab.c analisador.lex.c
 H_SOURCES = analisador.tab.h
 
-all: $(TARGET)L
+all: $(TARGET)
 
 $(TARGET): $(C_SOURCES)
-	$(CC) $(CFLAGS) -o $(TARGET) $(C_SOURCES) -lfl
+	$(CC) -o $(TARGET) $(C_SOURCES) -lfl
 
+$(C_SOURCES) $(H_SOURCES): analisador.y
 	$(BISON) -d -v analisador.y
+
+analisador.lex.c: analisador.l $(H_SOURCES)
 	$(FLEX) -o analisador.lex.c analisador.l
 
 clean:

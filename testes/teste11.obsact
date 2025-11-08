@@ -1,0 +1,6 @@
+dispositivos:
+  CaixaAgua [nivel]
+  Bomba
+fimdispositivos
+def nivel = 15;
+quando nivel <= 20 execute ligar em Bomba;

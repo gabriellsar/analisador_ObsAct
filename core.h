@@ -1,9 +1,9 @@
-#ifdef CORE_H
+#ifndef CORE_H
 #define CORE_H
 
   void ligar(char* id);
   void desligar(char* id);
   void alerta(char* id, char* msg);
-  void alertav(char* id, char* msg, char** var);
+  void alertav(char* id, char* msg, int var);
 
 #endif

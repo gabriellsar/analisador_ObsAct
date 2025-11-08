@@ -1,0 +1,6 @@
+dispositivos:
+  MedidorDecibeis [ruido]
+  AvisoSonoro
+fimdispositivos
+def ruido = 85;
+quando ruido >= 80 execute ligar em AvisoSonoro;

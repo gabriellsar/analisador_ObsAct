@@ -1,0 +1,7 @@
+dispositivos:
+  Painel
+  SensorFumaca [detectado]
+fimdispositivos
+def detectado = True;
+alerta para Painel: "Iniciando sistema.";
+quando detectado == True alerta para Painel: "FUMACA DETECTADA:", detectado;

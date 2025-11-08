@@ -1,0 +1,12 @@
+dispositivos:
+  Central
+  PortaGaragem [aberta]
+  LuzGaragem [potencia]
+  SensorCarro [presente]
+fimdispositivos
+def aberta = False;
+def potencia = 0;
+def presente = True;
+quando presente == True execute ligar em LuzGaragem;
+quando aberta == True AND presente == False execute desligar em LuzGaragem;
+alerta para Central: "Sistema de garagem operacional.";

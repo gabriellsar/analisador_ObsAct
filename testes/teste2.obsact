@@ -1,8 +1,9 @@
-dispositivos :
+dispositivos:
   Monitor
-  Celular
-  Termometro [ temperatura ]
+  Celular [movimento]
+  Higrometro [umidade]
+  Lampada [potencia]
 fimdispositivos
-
-quando temperatura > 30 :
-difundir : " Temperatura em " temperatura -> [ Monitor , Celular];
+def potencia = 100;
+quando umidade < 40 alerta para Monitor: "Ar seco detectado";
+quando movimento == True execute ligar em Lampada senao execute desligar em Lampada;

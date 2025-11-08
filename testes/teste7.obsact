@@ -1,0 +1,6 @@
+dispositivos:
+  ArCondicionado [temp]
+  LuzExterna [intensidade]
+fimdispositivos
+def temp = 22;
+def intensidade = 0;

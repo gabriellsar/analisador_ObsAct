@@ -1,4 +1,5 @@
 dispositivos :
   Termometro [ temperatura ]
-  Ventilador [ potencia ]
 fimdispositivos
+def temperatura = 37;
+alerta para Termometro : " Temperatura esta em " , temperatura ;

@@ -1,0 +1,5 @@
+dispositivos:
+  Termometro [temperatura]
+  Freezer
+fimdispositivos
+quando temperatura <= 0 execute ligar em Freezer;

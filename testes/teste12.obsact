@@ -1,0 +1,7 @@
+dispositivos:
+  LuzSala [potencia]
+  LuzCozinha [potencia]
+fimdispositivos
+def potencia = 0;
+execute ligar em LuzSala;
+execute ligar em LuzCozinha;
