@@ -1,6 +1,5 @@
 dispositivos:
-  ArCondicionado [temp]
-  LuzExterna [intensidade]
+    Sensor1
 fimdispositivos
-def temp = 22;
-def intensidade = 0;
+
+execute ligar em Sensor1;

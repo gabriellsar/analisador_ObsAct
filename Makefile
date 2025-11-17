@@ -21,15 +21,15 @@ lex.yy.c: analisador.l $(H_SOURCES)
 
 clean:
 	rm -f $(TARGET) analisador.tab.c analisador.tab.h lex.yy.c analisador.output *.output
-	rm -f testes/saidas/*.c
-	rm -f testes/saidas/exec/*
+	rm -f saidas/*.c
+	rm -f saidas/exec/*
 
 TEST_FILES = $(wildcard testes/*.obsact)
 
 test: $(TARGET)
 	@for f in $(TEST_FILES); do \
 		base_name=$$(basename "$$f" .obsact); \
-		output_file="testes/saidas/$$base_name.c"; \
+		output_file="saidas/$$base_name.c"; \
 		./$(TARGET) < $$f > $$output_file; \
 	done
 	@echo " ---- TESTES CONCLUIDOS ----"

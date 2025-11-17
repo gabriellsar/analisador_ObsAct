@@ -1,5 +1,9 @@
-dispositivos :
-  Termometro [ temperatura ]
+dispositivos:
+    Ventilador
+    Termometro [temp]
 fimdispositivos
-def temperatura = 37;
-alerta para Termometro : " Temperatura esta em " , temperatura ;
+
+def temp = 25;
+
+quando temp >= 30 and temp < 40:
+    execute ligar em Ventilador;

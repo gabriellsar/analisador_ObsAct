@@ -1,10 +1,11 @@
 dispositivos:
-  Monitor
-  Celular [movimento]
-  Higrometro [umidade]
-  Lampada [potencia]
+    Alarme
+    Sensor [ativo]
 fimdispositivos
-def potencia = 100;
-quando umidade < 40 : alerta para Monitor : "Ar seco detectado" ;
-quando movimento == True : execute ligar em Lampada 
-senao execute desligar em Lampada;
+
+def ativo = 1;
+
+quando ativo == True:
+    execute ligar em Alarme
+senao
+    execute desligar em Alarme;

@@ -1,8 +1,0 @@
-dispositivos:
-  SensorLuz [luminosidade]
-  SensorPresenca [movimento]
-  PosteLuz [estado]
-fimdispositivos
-def luminosidade = 30;
-def movimento = True;
-quando luminosidade < 50 and movimento == True : execute ligar em PosteLuz;

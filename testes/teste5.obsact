@@ -1,4 +1,9 @@
 dispositivos:
-  Celular
+    Monitor
+    Central [temperatura]
 fimdispositivos
-alerta para Celular: "Hora de acordar!";
+
+def temperatura = 100;
+
+quando temperatura > 90:
+    difundir: "Superaquecimento em " temperatura -> [Monitor];

@@ -11,10 +11,10 @@
 
   extern int yylex();
   extern int yyparse();
-  extern FILE* yyin;
 
   void yyerror(const char *s);
   int validar_ID_DEVICE(char* id_device);
+  int validar_ID_OBS(char* id_obs);
 %}
 
 %union {
@@ -56,9 +56,10 @@
   DEVICE:
     ID {if(!validar_ID_DEVICE($1)) YYABORT;}
     | ID '[' ID ']' {
-      printf("int %s = 0;\n",$3);
-
       if(!validar_ID_DEVICE($1)) YYABORT;
+      if(!validar_ID_OBS($3)) YYABORT;
+
+      printf("int %s = 0;\n",$3);
     }
   ;
   CMD_SEC:
@@ -74,6 +75,8 @@
   ;
   ATTRIB:
     T_DEF ID '=' VAL {
+      if(!validar_ID_OBS($2)) YYABORT;
+
       printf("\t%s = %d;\n",$2,$4);
     }
   ;
@@ -83,7 +86,8 @@
   ;
   OBS:
     ID T_OPLOGIC VAL {
-     printf("%s %s %d",$1,$2,$3);
+      if(!validar_ID_OBS($1)) YYABORT; 
+      printf("%s %s %d",$1,$2,$3);
     } 
     OBS_LIST
   ;
@@ -99,6 +103,8 @@
     }
     | T_ALERTA T_PARA ID ':' T_MSG ',' ID {
       if(!validar_ID_DEVICE($3)) YYABORT;
+      if(!validar_ID_OBS($7)) YYABORT; 
+
       printf("\t\talertav(\"%s\",\"%s\", %s);\n", $3, $5, $7);
       free($5);
     }
@@ -161,6 +167,14 @@ int validar_ID_DEVICE(char* id_device) {
       return 0;
     }
   }  return 1;
+}
+
+int validar_ID_OBS(char* id_obs) {
+  if (!isalpha(id_obs[0])) {
+    yyerror("Erro em ID_OBS: Inicia com numero");
+    return 0;
+  }
+  return 1;
 }
 
 int main(void) {

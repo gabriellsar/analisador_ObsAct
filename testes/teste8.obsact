@@ -1,6 +1,3 @@
 dispositivos:
-  SensorPresenca [movimento]
-  Alarme
+    EsteNomeDeDispositivoEhAbsurdamenteGrandeEComCertezaVaiUltrapassarOLimiteDeCemCaracteresQueVoceDefiniuNoCodigoParaGarantirSeguranca
 fimdispositivos
-def movimento = False;
-quando movimento == True : execute ligar em Alarme;

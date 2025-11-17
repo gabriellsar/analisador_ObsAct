@@ -1,8 +1,0 @@
-dispositivos:
-  Irrigador
-  SensorUmidade [umidade]
-  SensorLuz [luz]
-fimdispositivos
-def umidade = 20;
-def luz = 800;
-quando umidade < 30 and luz > 700 : execute ligar em Irrigador;

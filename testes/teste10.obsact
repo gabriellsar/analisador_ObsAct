@@ -1,6 +1,7 @@
 dispositivos:
-  MedidorDecibeis [ruido]
-  AvisoSonoro
+    Luz
 fimdispositivos
-def ruido = 85;
-quando ruido >= 80 : execute ligar em AvisoSonoro;
+
+def valor = 10
+
+execute ligar em Luz;

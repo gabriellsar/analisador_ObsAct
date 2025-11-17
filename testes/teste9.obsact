@@ -1,6 +1,5 @@
 dispositivos:
-  Monitor
-  Lampada [potencia]
-  SensorPorta [estado]
+    Painel
 fimdispositivos
-;
+
+alerta para Painel: "Esta string foi criada propositalmente para ter mais de cem caracteres e testar a validacao especifica que existe no arquivo analisador ponto l dentro da regra MSG";

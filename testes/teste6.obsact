@@ -1,7 +1,9 @@
 dispositivos:
-  Cafeteira [pronta]
-  Display
+    Console
+    Controle [bateria]
 fimdispositivos
-def pronta = False ;
-quando pronta != True : alerta para Display: "Fazendo cafe" 
-senao alerta para Display: "Cafe pronto" ;
+
+def bateria = 15;
+
+quando bateria <= 20:
+    alerta para Console: "Bateria fraca: ", bateria;

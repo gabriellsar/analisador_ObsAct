@@ -10,7 +10,7 @@ void desligar(char* id) {
 }
 
 void alerta(char* id, char* msg) {
-  printf("%s recebeu o alerta:\n", id);
+  printf("%s recebeu o alerta: ", id);
   printf("%s\n", msg);
 }
 
