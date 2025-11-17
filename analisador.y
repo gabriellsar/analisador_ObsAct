@@ -19,7 +19,7 @@
 
 %union {
   char *str;
-  int num;
+  unsigned int num;
   struct DevListNode* devList;
 }
 
